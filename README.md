@@ -41,3 +41,10 @@ Output contains two empty spaces at the end of the line for ease of pasting into
 ```sh
 ./da_pairs pocket_gophers | pbcopy
 ```
+
+### Todo
+
+- Accept STDIN as student list. Ex:
+```sh
+backoffice --cohort 14 | da_pairs
+```
