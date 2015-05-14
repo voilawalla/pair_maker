@@ -7,7 +7,7 @@ require_relative 'file_access'
 FILE = ARGV.first
 INPUT_JSON = FileAccess.read FILE
 
-students = INPUT_JSON.each_pair.map do |key, val| 
+students = INPUT_JSON.each_pair.map do |key, val|
   Student.new name: key.to_s, previous_pairs: val
 end
 

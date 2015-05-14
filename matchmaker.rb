@@ -1,29 +1,17 @@
 class MatchMaker
-
-  attr_reader :students
+  attr_reader   :students
   attr_accessor :pairs
 
   def initialize students
     @students = students
-    @pairs    = Set.new
+    @pairs    = []
   end
 
-  def make_pairs
-    students.each do |stu_x|
-      next if pairs.include? stu_x
+  def make_pairs to_pair=students
+    return self if to_pair.empty?
 
-      students.reverse_each do |stu_y|
-        next if pairs.include?(stu_y)
-        next if stu_y == stu_x
-
-        unless previously_paired?(stu_x, stu_y)
-          pairs.add(stu_x).add(stu_y)
-          update_pair_history(stu_x, stu_y)
-          break
-        end
-      end
-    end
-    self
+    pairs.push to_pair.shuffle.first.pair!(to_pair)
+    make_pairs(students - pairs.flatten)
   end
 
   def to_hash
@@ -31,21 +19,7 @@ class MatchMaker
   end
 
   private
-    def previously_paired? stu_x, stu_y
-      stu_x.previous_pairs.include?(stu_y.name) &&
-        stu_y.previous_pairs.include?(stu_x.name)
-    end
-
-    def update_pair_history stu_x, stu_y
-      stu_x.previous_pairs << stu_y.name
-      stu_y.previous_pairs << stu_x.name
-    end
-
-    def to_s
-      to_hash.each_with_object(Set.new) do |(k, v), set|
-        set << [k, v.last].sort
-      end
-        .map {|pair| "Pair: #{pair[0]} & #{pair[1]}  "}.join("\n")
-    end
-
+  def to_s
+    pairs.map {|pair| "- #{pair[0]} & #{pair[1]}  "}.join("\n")
+  end
 end
