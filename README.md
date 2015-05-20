@@ -1,17 +1,9 @@
 # Make Pairs
 
 ## Usage
-```ruby
-./make_pairs pocket_gophers
-```
+Create a new branch with your cohort name.
 
-Then immediately:
-
-```bash
-git commit -m 'log todays pairs'
-```
-
-The argument must be a file that contains the cohort members and their previous pairs. One must start with an empty file in the following format.
+Create a file that contains the cohort members and their previous pairs. One must start with an empty file in the following format.
 
 ```json
 {  
@@ -29,6 +21,18 @@ The argument must be a file that contains the cohort members and their previous 
 }
 
 ```
+
+To generate unique pairs:
+```ruby
+./make_pairs pocket_gophers
+```
+
+Then immediately:
+
+```bash
+git commit -m 'log todays pairs'
+```
+
 
 Pair history is kept in a file called `todays_pairs`. Review the file's git history on a certain day to see that day's pairs
 
@@ -48,7 +52,7 @@ Pair: Luis Echenique & Luis Echenique
 
 ```
 
-Output is markdown-formatted of reasy pasting into wikis.
+Output is markdown-formatted for easy pasting into wikis.
 
 ```sh
 ./make_pairs pocket_gophers | pbcopy
