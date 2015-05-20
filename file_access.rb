@@ -9,7 +9,7 @@ module FileAccess
 
   def write file, data
     File.open(file, "wb") do |file|
-      file.puts JSON.pretty_generate(data)
+      file.puts data
     end
   end
 

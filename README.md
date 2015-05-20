@@ -2,13 +2,20 @@
 
 ## Usage
 ```ruby
-./da_pairs pocket_gophers
+./make_pairs pocket_gophers
 ```
 
-Pair history is kept in `pocket_gophers`. One must start with an empty file in the following format.
+Then immediately:
+
+```bash
+git commit -m 'log todays pairs'
+```
+
+The argument must be a file that contains the cohort members and their previous pairs. One must start with an empty file in the following format.
 
 ```json
-{  "Ace Burgess": [],
+{  
+  "Ace Burgess": [],
   "Alex Taber": [],
   "Aristides Perez": [],
   "Brendan Miranda": [],
@@ -18,9 +25,14 @@ Pair history is kept in `pocket_gophers`. One must start with an empty file in t
   "Scott Warner": [],
   "Sherman Ng": [],
   "Siddharth Watal": [],
-  "Tanya Trinkle": [] }
+  "Tanya Trinkle": [] 
+}
 
 ```
+
+Pair history is kept in a file called `todays_pairs`. Review the file's git history on a certain day to see that day's pairs
+
+
 
 ## Output
 
@@ -36,15 +48,15 @@ Pair: Luis Echenique & Luis Echenique
 
 ```
 
-Output contains two empty spaces at the end of the line for ease of pasting into markdown.
+Output is markdown-formatted of reasy pasting into wikis.
 
 ```sh
-./da_pairs pocket_gophers | pbcopy
+./make_pairs pocket_gophers | pbcopy
 ```
 
 ### Todo
 
 - Accept STDIN as student list. Ex:
 ```sh
-backoffice --cohort 14 | da_pairs
+backoffice --cohort 14 | make_pairs
 ```

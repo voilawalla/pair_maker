@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-
+require 'json'
 require_relative 'student'
 require_relative 'matchmaker'
 require_relative 'file_access'
@@ -12,5 +12,5 @@ students = INPUT_JSON.each_pair.map do |key, val|
 end
 
 puts matcher = MatchMaker.new(students).make_pairs
-FileAccess.write(FILE, matcher.to_hash)
-
+data = JSON.pretty_generate(matcher.to_hash)
+FileAccess.write(FILE, data)
