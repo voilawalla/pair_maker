@@ -1,0 +1,82 @@
+{
+  "Ace Burgess": [
+    "Scott Warner",
+    "Aristides Perez",
+    "Siddharth Watal",
+    "Doraly Pantaleon",
+    "Tanya Trinkle",
+    "Sherman Ng"
+  ],
+  "Alex Taber": [
+    "Tanya Trinkle",
+    "Sherman Ng",
+    "Aristides Perez",
+    "Luis Echenique",
+    "Brendan Miranda",
+    "Siddharth Watal"
+  ],
+  "Aristides Perez": [
+    "Doraly Pantaleon",
+    "Ace Burgess",
+    "Alex Taber",
+    "Siddharth Watal",
+    "Luis Echenique",
+    "Brendan Miranda"
+  ],
+  "Brendan Miranda": [
+    "Siddharth Watal",
+    "Luis Echenique",
+    "Doraly Pantaleon",
+    "Scott Warner",
+    "Alex Taber",
+    "Aristides Perez"
+  ],
+  "Doraly Pantaleon": [
+    "Aristides Perez",
+    "Scott Warner",
+    "Brendan Miranda",
+    "Ace Burgess",
+    "Sherman Ng",
+    "Tanya Trinkle"
+  ],
+  "Luis Echenique": [
+    "Sherman Ng",
+    "Brendan Miranda",
+    "Tanya Trinkle",
+    "Alex Taber",
+    "Aristides Perez",
+    "Scott Warner"
+  ],
+  "Scott Warner": [
+    "Ace Burgess",
+    "Doraly Pantaleon",
+    "Sherman Ng",
+    "Brendan Miranda",
+    "Siddharth Watal",
+    "Luis Echenique"
+  ],
+  "Sherman Ng": [
+    "Luis Echenique",
+    "Alex Taber",
+    "Scott Warner",
+    "Tanya Trinkle",
+    "Doraly Pantaleon",
+    "Ace Burgess"
+  ],
+  "Siddharth Watal": [
+    "Brendan Miranda",
+    "Tanya Trinkle",
+    "Ace Burgess",
+    "Aristides Perez",
+    "Scott Warner",
+    "Alex Taber"
+  ],
+  "Tanya Trinkle": [
+    "Alex Taber",
+    "Siddharth Watal",
+    "Luis Echenique",
+    "Sherman Ng",
+    "Ace Burgess",
+    "Doraly Pantaleon"
+  ]
+}

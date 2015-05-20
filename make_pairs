@@ -11,7 +11,7 @@ students = INPUT_JSON.each_pair.map do |key, val|
   Student.new name: key.to_s, previous_pairs: val
 end
 
-matcher = MatchMaker.new(students).make_pairs
+puts matcher = MatchMaker.new(students).make_pairs
 FileAccess.write("./todays_pairs", matcher.to_s)
 data = JSON.pretty_generate(matcher.to_hash)
 FileAccess.write(FILE, data)
