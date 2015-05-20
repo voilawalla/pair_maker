@@ -18,7 +18,6 @@ class MatchMaker
     students.map(&:to_hash).reduce({}, :merge)
   end
 
-  private
   def to_s
     pairs.map {|pair| "- #{pair[0]} & #{pair[1]}  "}.join("\n")
   end
