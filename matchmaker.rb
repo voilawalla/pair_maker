@@ -19,6 +19,6 @@ class MatchMaker
   end
 
   def to_s
-    pairs.map {|pair| "- #{pair[0]} & #{pair[1]}  "}.join("\n")
+    pairs.map {|pair| "#{pair[0]} \n& \n#{pair[1]}"}.join("\n\n")
   end
 end
